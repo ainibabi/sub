@@ -406,7 +406,7 @@ proxy-groups:
       - 🇩🇪 冷门节点
       - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/github.png
-    name: Github
+    name: GitHub
     type: select
     proxies:
       - ♻️ 自动选择
