@@ -2,7 +2,6 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
