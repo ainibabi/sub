@@ -1,0 +1,2567 @@
+---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  nameserver:
+  - 172.18.10.2
+  fallback:
+  - https://dns.google/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://1.1.1.1/dns-query
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  respect-rules: true
+  fake-ip-filter-mode: blacklist
+  proxy-server-nameserver:
+  - 172.18.10.2
+  direct-nameserver:
+  - 172.18.10.2
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - "*.direct"
+  - cable.auth.com
+  - network-test.debian.org
+  - detectportal.firefox.com
+  - resolver1.opendns.com
+  - global.turn.twilio.com
+  - global.stun.twilio.com
+  - app.yinxiang.com
+  - injections.adguard.org
+  - localhost.*.weixin.qq.com
+  - "*.blzstatic.cn"
+  - "*.cmpassport.com"
+  - id6.me
+  - open.e.189.cn
+  - opencloud.wostore.cn
+  - id.mail.wo.cn
+  - mdn.open.wo.cn
+  - hmrz.wo.cn
+  - nishub1.10010.com
+  - enrichgw.10010.com
+  - "*.wosms.cn"
+  - "*.jegotrip.com.cn"
+  - "*.icitymobile.mobi"
+  - "*.pingan.com.cn"
+  - "*.cmbchina.com"
+  - "*.10099.com.cn"
+  - "*.microdone.cn"
+  - PDC._msDCS.*.*
+  - DC._msDCS.*.*
+  - GC._msDCS.*.*
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.qq.com"
+  - "+.tencent.com"
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.cdn.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battle.net"
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - na.b.g-tun.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - Mijia Cloud
+  - "+.cmbchina.com"
+  - "+.cmbimg.com"
+  - local.adguard.org
+  - "+.sandai.net"
+  - "+.n0808.com"
+  - "+.uu.163.com"
+  - ps.res.netease.com
+  - "+.pub.3gppnetwork.org"
+  - "+.services.googleapis.cn"
+  - "+.googleapis.cn"
+  - "+.xn--ngstr-lra8j.com"
+  - geosite:cn
+  default-nameserver:
+  - 223.5.5.5
+proxies:
+  - name: 台湾 | 80 | TCP |
+    type: vmess
+    server: 211.22.180.126
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - data.video.qiyi.com
+    skip-cert-verify: true
+  - name: 泰国 | 80 | TCP | 原生IP流媒体
+    type: vmess
+    server: th1g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: Az香港3 | 80 | WS | |流媒体|
+    type: vmess
+    server: hk1g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: Az香港2 | 80 | TCP |
+    type: vmess
+    server: hk2g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: 日本1 | 80 | TCP | |流媒体|
+    type: vmess
+    server: jp1g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: 日本2 | 80 | TCP |
+    type: vmess
+    server: jp25g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: Az日本3 | 80 | TCP |
+    type: vmess
+    server: jp35g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: Az日本4 | 80 | TCP |
+    type: vmess
+    server: jp3g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: 新加坡1 | 80 | TCP | |流媒体|
+    type: vmess
+    server: sg1g.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: 韩国1 | 80 | TCP |
+    type: vmess
+    server: kr1.wi-fi-ai.com
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: 美国 | 80 | TCP |
+    type: vmess
+    server: uc.qingzile.top
+    port: 80
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+        - /TS/recharge/tzUrl.html
+        - /favicon.ico
+        - /i/mobile/greentip.html
+        - /payprod-format/h5/dup_submit
+      headers:
+        Host:
+          - a.189.cn
+    skip-cert-verify: true
+  - name: 美国2  | Kcp |
+    type: vmess
+    server: uc.qingzile.top
+    port: 9443
+    uuid: 132c7d4a-9c8d-42cc-b666-6ebfea6976bb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: mkcp
+    mkcp-opts:
+      headers:
+        type: srtp
+    skip-cert-verify: true
+  - name: 香港 01 | ws
+    type: vmess
+    server: d1d71439-993f-6cfc-ab7a-25a1945b45da.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 香港 02 | ws
+    type: vmess
+    server: a8606b8a-7412-19ea-dd7f-2d29cf247dcb.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 香港 03 | ws
+    type: vmess
+    server: 619d3460-e201-be79-d7f9-b8c85f7ba8e4.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 香港 04 | tcp
+    type: vmess
+    server: 8c082111-0e9d-16eb-7101-1210cf96ac0a.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 香港 05 | tcp
+    type: vmess
+    server: 58c54bd5-b4c6-f7bd-9d71-9914773afafc.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 香港 06 | tcp
+    type: vmess
+    server: 1c7dcd56-033d-e1bd-156f-3196b843cda6.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 台湾 01 | ws
+    type: vmess
+    server: 5522dbbd-d0d8-6cf0-95cf-754584bf28bf.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 台湾 02 | ws
+    type: vmess
+    server: a6f0b439-712e-fd63-520c-5180966786e6.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 台湾 03 | tcp
+    type: vmess
+    server: 9a3c58ae-6c4a-d94a-9a83-030ab81a0880.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 台湾 04 | tcp
+    type: vmess
+    server: be633e22-3cb1-d69d-3bde-9c7940fafa11.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 新加坡 01 | ws
+    type: vmess
+    server: 3fc8cee7-4c89-a363-264d-6cbc4ddf92fc.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 新加坡 02 | ws
+    type: vmess
+    server: f26ce00c-b544-2353-9c8d-609bdab4eb4d.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 新加坡 03 | tcp
+    type: vmess
+    server: 945b5a1e-e0bc-428f-9971-1693ff81e5db.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 新加坡 04 | tcp
+    type: vmess
+    server: ebce812f-df59-637f-33a1-9298cc702970.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 日本 01 | ws
+    type: vmess
+    server: a41da1ab-5ae0-fa3e-eabe-70e680bdf1bf.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 日本 02 | ws
+    type: vmess
+    server: 2884cd7b-1cc6-5409-6c6d-558efa46a066.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 日本 03 | tcp
+    type: vmess
+    server: f2e8e37e-63a9-d4ba-0209-89c8aefbc495.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 日本 04 | tcp
+    type: vmess
+    server: c0c818cf-bc4a-d3f0-94ea-636c325ed650.castlepeakhospital.moe
+    port: 80
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 韩国 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20000
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 韩国 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20001
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 泰国 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20006
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 泰国 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20007
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 美国 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20012
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 美国 02 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20013
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 美国 03 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20014
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 美国 04 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20015
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 美国 05 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20016
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 美国 06 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20017
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 俄罗斯 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20022
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 俄罗斯 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20023
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 乌克兰 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20024
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 乌克兰 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20025
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 土耳其 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20026
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 土耳其 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20027
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 伊拉克 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20028
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 伊拉克 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20029
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 德国 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20030
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 德国 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20031
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 英国 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20032
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 英国 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20033
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 芬兰 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20036
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 芬兰 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20037
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 卢森堡 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20046
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 卢森堡 02 | tcp
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20047
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: http
+    http-opts:
+      path:
+        - /
+      method: GET
+      headers:
+        Connection:
+          - keep-alive
+        Host:
+          - tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 阿根廷 01 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20056
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 阿根廷 02 | ws
+    type: vmess
+    server: f77f38c7-faea-1c49-708a-489769f53c40.7head.icu
+    port: 20057
+    uuid: 541720f2-cd11-41b4-906d-91e0d7873d98
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tms.dingtalk.com
+    skip-cert-verify: true
+  - name: 香港 01
+    type: vless
+    server: 117.172.176.59
+    port: 25001
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1yHf5DvWRVBGq355DMqbBwXoT1QK06OZoL_TF33oAQk
+      short-id: 19a12a81
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 香港 02
+    type: vless
+    server: 117.172.176.61
+    port: 25002
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: UediUutOlEfwkfQZ7Vukcx5-mLclPZoNvcm8_UYpm38
+      short-id: 006669f8
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 香港 03
+    type: vless
+    server: 120.226.76.147
+    port: 25003
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: G_e111QOqi3trzDtmk2UkbDYszVu9Ajx9cPEs4EBLB4
+      short-id: 39d7421a
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 香港 04
+    type: vless
+    server: 183.94.30.208
+    port: 25004
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: IrJYhh6WQarzW4WA5ew7cZDlHjHIp5JFac0sPJoopl4
+      short-id: fb82bcf8
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: Emby 500Mbps 0.2X
+    type: vless
+    server: 117.172.176.59
+    port: 26443
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: DlAYNzs6RIusy2-Gjo-i9iXZZ1EG5TF6lkRJcuhZvDg
+      short-id: e3b9e6bc
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: Emby 700Mbps 0.2X
+    type: vless
+    server: 117.172.176.61
+    port: 26443
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: DlAYNzs6RIusy2-Gjo-i9iXZZ1EG5TF6lkRJcuhZvDg
+      short-id: e3b9e6bc
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 台湾 01
+    type: vless
+    server: 117.172.176.59
+    port: 26005
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: A4-EfGP6GwTabnRr7DgXoAf_IP29ZPxKE2tLYaqMOQw
+      short-id: bc3a4646
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 台湾 02
+    type: vless
+    server: 117.172.176.61
+    port: 26006
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: D3iyvwIDueiEl-e91FqJmX3yBrmWRT9EJK6ZKKTMyDM
+      short-id: 38f85eaa
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 台湾 03
+    type: vless
+    server: 120.226.76.147
+    port: 26007
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NXy2qofudpM5ajwebzGYUP3qzLFh0Q7Q_IWPzKWITT0
+      short-id: 81a56c1c
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 台湾 04
+    type: vless
+    server: 183.94.30.208
+    port: 26008
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: CiQfizEM5Z2hOwOqCUMWIA2x9dfN6CDfhbYd-43PJEQ
+      short-id: bdb159c4
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 日本 01
+    type: vless
+    server: 183.94.30.208
+    port: 26013
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Uem9zPxpyu21xSumgGqcCPhC0ab2fR_KjFNeICrVv1A
+      short-id: afe88beb
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 日本 02
+    type: vless
+    server: 117.172.176.61
+    port: 26014
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ZqBxN22b5SVO6pqnbWjNI8ZsMDQImXzASiL5H_hYxDA
+      short-id: bd961c2b
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 日本 03
+    type: vless
+    server: 120.226.76.147
+    port: 26015
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: UgWw1u7kNK1g1YAwFm8ldCadCvJZ7_gnuBfll_-qQlY
+      short-id: 1be93fe3
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 日本 04
+    type: vless
+    server: 183.94.30.208
+    port: 26016
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: czMiFwtIjaaAOIY-9loa3kLw_9c9HYFe52okukWjBAU
+      short-id: 15a917ec
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 新加坡 01
+    type: vless
+    server: 117.172.176.59
+    port: 26009
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: KWIFUkF-7UNluRkRIHtFaHMFeBqTRHaPMUKIb68q6Rw
+      short-id: 6b547d58
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 新加坡 02
+    type: vless
+    server: 117.172.176.61
+    port: 26010
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: aa7MsAIYZKMPALMVSmLjl7vR9pa3cKLjxj21Ts558Ak
+      short-id: c711d549
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 新加坡 03
+    type: vless
+    server: 120.226.76.147
+    port: 26011
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 6SeuoEFKDuR52iRjEc-0w4SH7qvFlNip2i8cN6sUGmA
+      short-id: aa82d6ba
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 新加坡 04
+    type: vless
+    server: 183.94.30.208
+    port: 26012
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 7CtHLvkhIGBgMQc9y3fL8gRb1lgmiVZhzoyd5BQDGww
+      short-id: 0821d0d6
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 韩国 01
+    type: vless
+    server: 120.226.76.147
+    port: 26022
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1x4V3HFQG79CBk5tA7iMrgkW_e1OmTZbK6CZOd_g6TI
+      short-id: 5145685c
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 马来西亚 01
+    type: vless
+    server: 120.226.76.147
+    port: 19002
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: z03VDrsnXoyHFxrhLGhvqlKxtG422XMt2OmCIoGkqgk
+      short-id: 8b13d2fa
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 越南 01
+    type: vless
+    server: 120.226.76.147
+    port: 19003
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 印度 01
+    type: vless
+    server: 120.226.76.147
+    port: 26024
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 94XDsVcEiOZYMqjOHy1w4wsgFiSgUp2IYCnHkP7uT2A
+      short-id: ede201fb
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 菲律宾 01
+    type: vless
+    server: 120.226.76.147
+    port: 19001
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 6B0bkPUlx4jQfunakSipOkbyFsWUUrBHAYspHKZB2TI
+      short-id: 0a34b87f
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 泰国 01
+    type: vless
+    server: 120.226.76.147
+    port: 19004
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 斯里兰卡 01
+    type: vless
+    server: 120.226.76.147
+    port: 19005
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 印度尼西亚 01
+    type: vless
+    server: 120.226.76.147
+    port: 19006
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 文莱 01
+    type: vless
+    server: 120.226.76.147
+    port: 19007
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 巴布亚新几内亚 01
+    type: vless
+    server: 120.226.76.147
+    port: 19008
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 关岛 01
+    type: vless
+    server: 120.226.76.147
+    port: 19009
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 柬埔寨 01
+    type: vless
+    server: 120.226.76.147
+    port: 19010
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 老挝 01
+    type: vless
+    server: 120.226.76.147
+    port: 19011
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 缅甸 01
+    type: vless
+    server: 120.226.76.147
+    port: 19012
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 孟加拉国 01
+    type: vless
+    server: 120.226.76.147
+    port: 19013
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 不丹 01
+    type: vless
+    server: 120.226.76.147
+    port: 19014
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 尼泊尔 01
+    type: vless
+    server: 120.226.76.147
+    port: 19015
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: j-eHF4zNdgLrS82yQS1QmndIDiy65u3f0t_yheth4Ts
+      short-id: 256a1266
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 澳大利亚 01
+    type: vless
+    server: 120.226.76.147
+    port: 26025
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: osNKKPQwZF-gLgV85PT38tiw4oHT58qSZGhVpDzXnCE
+      short-id: 94d177b7
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 美国 01
+    type: vless
+    server: 117.172.176.59
+    port: 26017
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1yHf5DvWRVBGq355DMqbBwXoT1QK06OZoL_TF33oAQk
+      short-id: 19a12a81
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 美国 02
+    type: vless
+    server: 117.172.176.61
+    port: 26018
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1yHf5DvWRVBGq355DMqbBwXoT1QK06OZoL_TF33oAQk
+      short-id: 19a12a81
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 美国 03
+    type: vless
+    server: 120.226.76.147
+    port: 26019
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1yHf5DvWRVBGq355DMqbBwXoT1QK06OZoL_TF33oAQk
+      short-id: 19a12a81
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 美国 04
+    type: vless
+    server: 183.94.30.208
+    port: 26020
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 1yHf5DvWRVBGq355DMqbBwXoT1QK06OZoL_TF33oAQk
+      short-id: 19a12a81
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 加拿大 01
+    type: vless
+    server: 117.172.176.61
+    port: 26026
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 3byynd1rM85Q4w3klX7pygUi2qO3zp_txs0D4KOaXiw
+      short-id: b70bcb04
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 英国 01
+    type: vless
+    server: 117.172.176.61
+    port: 26028
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nzn7u_QR8JV4dGP8JAS2C1hTinUvjKq5uTanmRglwVg
+      short-id: dbc326a4
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 德国 01
+    type: vless
+    server: 183.94.30.208
+    port: 26029
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: dbpkt2TO4N0ERbjy3Zh_lx1JP08B_Nm20btfrYMc4WM
+      short-id: 78d44f57
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 土耳其 01
+    type: vless
+    server: 183.94.30.208
+    port: 26031
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 3vepXkPoG6YYTEsSh47GgrOOYE7cKHzzPAqsOpabHD0
+      short-id: 277f2e28
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 荷兰 01
+    type: vless
+    server: 183.94.30.208
+    port: 26030
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jf7uLPtSuJiBRcTDaQkAkuphLRIq8hpyxyfHg_CDf3s
+      short-id: 1e94a933
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+  - name: 乌克兰 01
+    type: vless
+    server: 120.226.76.147
+    port: 26032
+    uuid: 7bb747c8-8718-4b88-8c2d-ea23f7583af2
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: wqCdCMM9QYMwRxMSDqWlKaUEaiOFdzRIu7rQWR2eHSg
+      short-id: d178fdba
+    network: tcp
+    servername: hlsliveali-cdn.ysp.cctv.cn
+rule-providers:
+  private:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_domain:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml
+    path: ./ruleset/cn_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_ip:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml
+    path: ./ruleset/cn_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  TikTok:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml
+    path: ./ruleset/TikTok.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  telegram_domain:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.yaml
+    path: ./ruleset/telegram_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  telegram_ip:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.yaml
+    path: ./ruleset/telegram_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  OpenAI:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/OpenAI.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Copilot:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml
+    path: ./ruleset/Copilot.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Claude:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml
+    path: ./ruleset/Claude.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  BardAI:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml
+    path: ./ruleset/BardAI.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Instagram:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Instagram/Instagram.yaml
+    path: ./ruleset/Instagram.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Spotify:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Spotify/Spotify.yaml
+    path: ./ruleset/Spotify.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  YouTube:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml
+    path: ./ruleset/YouTube.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Netflix:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Netflix/Netflix.yaml
+    path: ./ruleset/Netflix.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Apple:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.yaml
+    path: ./ruleset/Apple.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  google_domain:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.yaml
+    path: ./ruleset/google_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  google_ip:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.yaml
+    path: ./ruleset/google_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  GameDownload:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
+    path: ./ruleset/GameDownload.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Game:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.yaml
+    path: ./ruleset/Game.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  GitHub:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
+    path: ./ruleset/GitHub.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Bing:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml
+    path: ./ruleset/Bing.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  GlobalMedia:
+    url: >-
+      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    path: ./ruleset/GlobalMedia.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  Customize:
+    url: >-
+      https://raw.githubusercontent.com/ainibabi/sub/refs/heads/main/customize.yaml
+    path: ./ruleset/Customize.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  geolocation-!cn:
+    url: >-
+      https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+proxy-groups:
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png'
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: "\U0001F680 节点选择"
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png'
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: ♻️ 自动选择
+    type: url-test
+    interval: 300
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TikTok.png'
+    name: TikTok
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png'
+    name: Telegram
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png'
+    name: OpenAI
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Instagram.png'
+    name: Instagram
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Spotify.png'
+    name: Spotify
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/YouTube.png'
+    name: YouTube
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png'
+    name: Netflix
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png'
+    name: Apple
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png'
+    name: Google
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png'
+    name: GameDownload
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png'
+    name: Game
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/github.png'
+    name: GitHub
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Bing.png'
+    name: Bing
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png'
+    name: GlobalMedia
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Emby.png'
+    name: Customize
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png'
+    name: "\U0001F1ED\U0001F1F0 香港节点"
+    include-all: true
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png'
+    name: "\U0001F1ED\U0001F1F0 香港节点-自动"
+    include-all: true
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TW.png'
+    name: "\U0001F1E8\U0001F1F3 台湾节点"
+    include-all: true
+    filter: (?i)台|新北|彰化|TW|Taiwan
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TW.png'
+    name: "\U0001F1E8\U0001F1F3 台湾节点-自动"
+    include-all: true
+    filter: (?i)台|新北|彰化|TW|Taiwan
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png'
+    name: "\U0001F1F8\U0001F1EC 狮城节点"
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png'
+    name: "\U0001F1F8\U0001F1EC 狮城节点-自动"
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png'
+    name: "\U0001F1EF\U0001F1F5 日本节点"
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png'
+    name: "\U0001F1EF\U0001F1F5 日本节点-自动"
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/US.png'
+    name: "\U0001F1FA\U0001F1F2 美国节点"
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/US.png'
+    name: "\U0001F1FA\U0001F1F2 美国节点-自动"
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png'
+    name: "\U0001F1F0\U0001F1F7 韩国节点"
+    include-all: true
+    filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png'
+    name: "\U0001F1F0\U0001F1F7 韩国节点-自动"
+    include-all: true
+    filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/airport.png'
+    name: "\U0001F1E9\U0001F1EA 冷门节点"
+    include-all: true
+    exclude-filter: >-
+      (?i)KR|Korea|KOR|首尔|韩|韓|武汉|济南|徐州|镇江|以下为|去除|禁止|香港|HK|Hong\s?Kong|Hongkong|新加坡|坡|狮城|SG|Singapore|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|Tokyo|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United\s?States|America|California|台|新北|彰化|TW|Taiwan|重置
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: 'https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png'
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    proxies:
+      - ♻️ 自动选择
+      - "\U0001F1ED\U0001F1F0 香港节点"
+      - "\U0001F1ED\U0001F1F0 香港节点-自动"
+      - "\U0001F1E8\U0001F1F3 台湾节点"
+      - "\U0001F1E8\U0001F1F3 台湾节点-自动"
+      - "\U0001F1F8\U0001F1EC 狮城节点"
+      - "\U0001F1F8\U0001F1EC 狮城节点-自动"
+      - "\U0001F1EF\U0001F1F5 日本节点"
+      - "\U0001F1EF\U0001F1F5 日本节点-自动"
+      - "\U0001F1FA\U0001F1F2 美国节点"
+      - "\U0001F1FA\U0001F1F2 美国节点-自动"
+      - "\U0001F1F0\U0001F1F7 韩国节点"
+      - "\U0001F1F0\U0001F1F7 韩国节点-自动"
+      - "\U0001F1E9\U0001F1EA 冷门节点"
+      - DIRECT
+    name: GLOBAL
+    type: select
+rules:
+  - 'RULE-SET,private,DIRECT'
+  - 'RULE-SET,TikTok,TikTok'
+  - 'RULE-SET,telegram_domain,Telegram'
+  - 'RULE-SET,telegram_ip,Telegram'
+  - 'RULE-SET,OpenAI,OpenAI'
+  - 'RULE-SET,Copilot,OpenAI'
+  - 'RULE-SET,Claude,OpenAI'
+  - 'RULE-SET,BardAI,OpenAI'
+  - 'RULE-SET,Instagram,Instagram'
+  - 'RULE-SET,Spotify,Spotify'
+  - 'RULE-SET,YouTube,YouTube'
+  - 'RULE-SET,Netflix,Netflix'
+  - 'RULE-SET,Apple,Apple'
+  - 'RULE-SET,google_domain,Google'
+  - 'RULE-SET,google_ip,Google'
+  - 'RULE-SET,GameDownload,GameDownload'
+  - 'RULE-SET,Game,Game'
+  - 'RULE-SET,GitHub,GitHub'
+  - 'RULE-SET,Bing,Bing'
+  - 'RULE-SET,GlobalMedia,GlobalMedia'
+  - 'RULE-SET,Customize,Customize'
+  - "RULE-SET,geolocation-!cn,\U0001F680 节点选择"
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - "MATCH,\U0001F680 节点选择"
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7893
+secret: '123456'
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+keep-alive-interval: 15
+keep-alive-idle: 600
+ipv6: true
+geodata-mode: true
+geodata-loader: standard
+tcp-concurrent: true
+unified-delay: true
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - "+.apple.com"
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+  parse-pure-ip: true
+tun:
+  enable: true
+  stack: mixed
+  device: utun
+  dns-hijack:
+  - 127.0.0.1:53
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+authentication:
+- clash:123456
