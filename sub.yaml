@@ -1,19 +1,19 @@
 rule-providers:
-  private:
+  #private:
     url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml
     path: ./ruleset/private.yaml
     behavior: domain
     interval: 86400
     format: yaml
     type: http
-  cn_domain:
+  #cn_domain:
     url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml
     path: ./ruleset/cn_domain.yaml
     behavior: domain
     interval: 86400
     format: yaml
     type: http
-  cn_ip:
+  #cn_ip:
     url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml
     path: ./ruleset/cn_ip.yaml
     behavior: ipcidr
@@ -602,7 +602,7 @@ proxy-groups:
     type: select
 
 rules:
-  - "RULE-SET,private,DIRECT"
+  #- "RULE-SET,private,DIRECT"
   - "RULE-SET,TikTok,TikTok"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
@@ -625,7 +625,7 @@ rules:
   - "RULE-SET,Customize,Customize" 
   - "RULE-SET,geolocation-!cn,🚀 节点选择"
   - "RULE-SET,cn_domain,DIRECT"
-  - "RULE-SET,cn_ip,DIRECT"
-  - "GEOIP,CN,DIRECT"
+  #- "RULE-SET,cn_ip,DIRECT"
+  #- "GEOIP,CN,DIRECT"
   - "RULE-SET,Lan,DIRECT"
   - "MATCH,🚀 节点选择"
