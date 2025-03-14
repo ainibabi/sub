@@ -624,7 +624,7 @@ rules:
   - "RULE-SET,GlobalMedia,GlobalMedia"
   - "RULE-SET,Customize,Customize" 
   - "RULE-SET,geolocation-!cn,🚀 节点选择"
-  - "RULE-SET,cn_domain,DIRECT"
+  #- "RULE-SET,cn_domain,DIRECT"
   #- "RULE-SET,cn_ip,DIRECT"
   #- "GEOIP,CN,DIRECT"
   - "RULE-SET,Lan,DIRECT"
