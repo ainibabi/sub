@@ -167,6 +167,13 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  Lan:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan.yaml
+    path: ./ruleset/Lan.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
 
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
@@ -620,4 +627,5 @@ rules:
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT"
   - "GEOIP,CN,DIRECT"
+  - "RULE-SET,Lan,DIRECT"
   - "MATCH,🚀 节点选择"
