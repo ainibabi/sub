@@ -163,7 +163,7 @@ rule-providers:
   geolocation-!cn:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.yaml
     path: ./ruleset/geolocation-!cn.yaml
-    behavior: domain
+    behavior: classical
     interval: 86400
     format: yaml
     type: http
