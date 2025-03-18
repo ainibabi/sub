@@ -161,8 +161,15 @@ rule-providers:
     format: yaml
     type: http
   geolocation-!cn:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.yaml
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml
     path: ./ruleset/geolocation-!cn.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  Global:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.yaml
+    path: ./ruleset/Global.yaml
     behavior: classical
     interval: 86400
     format: yaml
@@ -624,6 +631,7 @@ rules:
   - "RULE-SET,GlobalMedia,GlobalMedia"
   - "RULE-SET,Customize,Customize" 
   - "RULE-SET,geolocation-!cn,🚀 节点选择"
+  - "RULE-SET,Global,🚀 节点选择"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT"
   - "GEOIP,CN,DIRECT"
