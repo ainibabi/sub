@@ -598,7 +598,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-    name: GLOBAL
+    name: 🐟 漏网之鱼
     type: select
 
 rules:
@@ -628,4 +628,4 @@ rules:
   - "RULE-SET,cn_ip,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "RULE-SET,Lan,DIRECT"
-  - "MATCH,🚀 节点选择"
+  - "MATCH,🐟 漏网之鱼"
