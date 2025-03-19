@@ -190,6 +190,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -215,6 +216,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -234,6 +236,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -253,6 +256,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -272,6 +276,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -291,6 +296,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -310,6 +316,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -329,6 +336,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -348,6 +356,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -367,6 +376,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -386,6 +396,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -405,6 +416,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -424,6 +436,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -443,6 +456,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -462,6 +476,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -481,6 +496,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
@@ -586,11 +602,19 @@ proxy-groups:
     type: select
     interval: 300
     tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/115.png
+    name: ✈️ 自建节点
+    include-all: true
+    filter: (?i)BWG|垃圾
+    type: select
+    interval: 300
+    tolerance: 50
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     proxies:
       - ♻️ 自动选择
+      - ✈️ 自建节点
       - 🇭🇰 香港节点
       - 🇭🇰 香港节点-自动
       - 🇨🇳 台湾节点
