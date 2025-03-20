@@ -153,7 +153,7 @@ rule-providers:
     path: ./ruleset/telegram_ip.mrs
     behavior: ipcidr
     interval: 86400
-    format: yaml
+    format: mrs
     type: http
   ai_ip:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/ai.mrs
