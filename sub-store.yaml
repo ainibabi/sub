@@ -1,0 +1,666 @@
+rule-providers:
+  private_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
+    path: ./ruleset/private_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  cn_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  tiktok_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs
+    path: ./ruleset/tiktok_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  telegram_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
+    path: ./ruleset/telegram_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  openai_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/openai.mrs
+    path: ./ruleset/openai_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  ai_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-chat-!cn.mrs
+    path: ./ruleset/ai_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  instagram_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/instagram.mrs
+    path: ./ruleset/instagram_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  spotify_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/spotify.mrs
+    path: ./ruleset/spotify_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  youTube_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/youtube.mrs
+    path: ./ruleset/youtube_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  netflix_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/netflix.mrs
+    path: ./ruleset/netflix_neiflix_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  apple_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/apple.mrs
+    path: ./ruleset/apple_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  google_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/google.mrs
+    path: ./ruleset/google_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  GameDownload:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
+    path: ./ruleset/GameDownload.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  game:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games.mrs
+    path: ./ruleset/game_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  github_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/github.mrs
+    path: ./ruleset/github_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  bing_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/bing.mrs
+    path: ./ruleset/bing_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  media_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-social-media-!cn.mrs
+    path: ./ruleset/media_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  Customize:
+    url: https://raw.githubusercontent.com/ainibabi/sub/refs/heads/main/customize.yaml
+    path: ./ruleset/Customize.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  geolocation-!cn:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/geolocation-!cn.mrs
+    path: ./ruleset/geolocation-!cn.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  proxy_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/proxy.mrs
+    path: ./ruleset/proxy_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  Lan:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan.yaml
+    path: ./ruleset/Lan.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+
+
+  telegram_ip:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/telegram.mrs
+    path: ./ruleset/telegram_ip.mrs
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  ai_ip:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/ai.mrs
+    path: ./ruleset/ai_ip.mrs
+    behavior: ipcidr
+    interval: 86400
+    format: mrs
+    type: http
+  netflix_ip:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/netflix.mrs
+    path: ./ruleset/netflix_ip.mrs
+    behavior: ipcidr
+    interval: 86400
+    format: mrs
+    type: http
+  google_ip:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/google.mrs
+    path: ./ruleset/google_ip.mrs
+    behavior: ipcidr
+    interval: 86400
+    format: mrs
+    type: http
+  cn_ip:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
+    path: ./ruleset/cn_ip.mrs
+    behavior: ipcidr
+    interval: 86400
+    format: mrs
+    type: http
+
+    
+proxy-groups:
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: ♻️ 自动选择
+    type: url-test
+    interval: 300
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TikTok.png
+    name: TikTok
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png
+    name: Telegram
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png
+    name: OpenAI
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Instagram.png
+    name: Instagram
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Spotify.png
+    name: Spotify
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/YouTube.png
+    name: YouTube
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png
+    name: Netflix
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png
+    name: Apple
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png
+    name: Google
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png
+    name: GameDownload
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png
+    name: Game
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/github.png
+    name: GitHub
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Bing.png
+    name: Bing
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png
+    name: GlobalMedia
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Emby.png
+    name: Customize
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Final.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
+    name: 🐟 漏网之鱼
+    type: select
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Flower.png
+    name: ✈️ 自建节点
+    include-all: true
+    filter: (?i)BWG|垃圾
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
+    name: 🇭🇰 香港节点
+    include-all: true
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
+    name: 🇭🇰 香港节点-自动
+    include-all: true
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TW.png
+    name: 🇨🇳 台湾节点
+    include-all: true
+    filter: (?i)台|新北|彰化|TW|Taiwan
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TW.png
+    name: 🇨🇳 台湾节点-自动
+    include-all: true
+    filter: (?i)台|新北|彰化|TW|Taiwan
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png
+    name: 🇸🇬 狮城节点
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png
+    name: 🇸🇬 狮城节点-自动
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png
+    name: 🇯🇵 日本节点
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png
+    name: 🇯🇵 日本节点-自动
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/US.png
+    name: 🇺🇲 美国节点
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/US.png
+    name: 🇺🇲 美国节点-自动
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png
+    name: 🇰🇷 韩国节点
+    include-all: true
+    filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    type: select
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png
+    name: 🇰🇷 韩国节点-自动
+    include-all: true
+    filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/airport.png
+    name: 🇩🇪 冷门节点
+    include-all: true
+    exclude-filter: (?i)KR|Korea|KOR|首尔|韩|韓|武汉|济南|徐州|镇江|以下为|去除|禁止|香港|HK|Hong\s?Kong|Hongkong|新加坡|坡|狮城|SG|Singapore|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|Tokyo|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United\s?States|America|California|台|新北|彰化|TW|Taiwan|重置
+    type: select
+    interval: 300
+    tolerance: 50
+
+rules:
+  - "RULE-SET,private,DIRECT"
+  - "RULE-SET,TikTok,TikTok"
+  - "RULE-SET,telegram_domain,Telegram"
+  - "RULE-SET,telegram_ip,Telegram,no-resolve"
+  - "RULE-SET,OpenAI,OpenAI"
+  - "RULE-SET,Copilot,OpenAI"
+  - "RULE-SET,Claude,OpenAI"
+  - "RULE-SET,BardAI,OpenAI"
+  - "RULE-SET,Instagram,Instagram"
+  - "RULE-SET,Spotify,Spotify"
+  - "RULE-SET,YouTube,YouTube"
+  - "RULE-SET,Netflix,Netflix"
+  - "RULE-SET,Apple,Apple"
+  - "RULE-SET,google_domain,Google"
+  - "RULE-SET,google_ip,Google,no-resolve"
+  - "RULE-SET,GameDownload,GameDownload"
+  - "RULE-SET,Game,Game"
+  - "RULE-SET,GitHub,GitHub"
+  - "RULE-SET,Bing,Bing"
+  - "RULE-SET,GlobalMedia,GlobalMedia"
+  - "RULE-SET,Customize,Customize" 
+  - "RULE-SET,geolocation-!cn,🚀 节点选择"
+  - "RULE-SET,Global,🚀 节点选择"
+  - "RULE-SET,cn_domain,DIRECT"
+  - "RULE-SET,cn_ip,DIRECT,no-resolve"
+  - "RULE-SET,Lan,DIRECT,no-resolve"
+  - "GEOIP,CN,DIRECT,no-resolve"
+  - "MATCH,🐟 漏网之鱼"
