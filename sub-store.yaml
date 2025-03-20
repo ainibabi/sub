@@ -55,7 +55,7 @@ rule-providers:
     interval: 86400
     format: mrs
     type: http
-  youTube_domain:
+  youtube_domain:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/youtube.mrs
     path: ./ruleset/youtube_domain.mrs
     behavior: domain
@@ -86,11 +86,11 @@ rule-providers:
   GameDownload:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
     path: ./ruleset/GameDownload.yaml
-    behavior: classical
+    behavior: domain
     interval: 86400
     format: yaml
     type: http
-  game:
+  game_domain:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games.mrs
     path: ./ruleset/game_domain.mrs
     behavior: domain
@@ -636,31 +636,30 @@ proxy-groups:
     tolerance: 50
 
 rules:
-  - "RULE-SET,private,DIRECT"
-  - "RULE-SET,TikTok,TikTok"
+  - "RULE-SET,private_domain,DIRECT"
+  - "RULE-SET,tiktok_domain,TikTok"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram,no-resolve"
-  - "RULE-SET,OpenAI,OpenAI"
-  - "RULE-SET,Copilot,OpenAI"
-  - "RULE-SET,Claude,OpenAI"
-  - "RULE-SET,BardAI,OpenAI"
-  - "RULE-SET,Instagram,Instagram"
-  - "RULE-SET,Spotify,Spotify"
-  - "RULE-SET,YouTube,YouTube"
-  - "RULE-SET,Netflix,Netflix"
-  - "RULE-SET,Apple,Apple"
+  - "RULE-SET,openai_domain,OpenAI"
+  - "RULE-SET,ai_domain,OpenAI"
+  - "RULE-SET,ai_ip,OpenAI,no-resolve"
+  - "RULE-SET,instagram_domain,Instagram"
+  - "RULE-SET,spotify_domain,Spotify"
+  - "RULE-SET,youtube_domain,YouTube"
+  - "RULE-SET,netflix_domain,Netflix"
+  - "RULE-SET,netflix_ip,Netflix,no-resolve"
+  - "RULE-SET,apple_domain,Apple"
   - "RULE-SET,google_domain,Google"
   - "RULE-SET,google_ip,Google,no-resolve"
   - "RULE-SET,GameDownload,GameDownload"
-  - "RULE-SET,Game,Game"
-  - "RULE-SET,GitHub,GitHub"
-  - "RULE-SET,Bing,Bing"
-  - "RULE-SET,GlobalMedia,GlobalMedia"
+  - "RULE-SET,game_domain,Game"
+  - "RULE-SET,github_domain,GitHub"
+  - "RULE-SET,bing_domain,Bing"
+  - "RULE-SET,media_domain,GlobalMedia"
   - "RULE-SET,Customize,Customize" 
   - "RULE-SET,geolocation-!cn,🚀 节点选择"
-  - "RULE-SET,Global,🚀 节点选择"
+  - "RULE-SET,proxy_domain,🚀 节点选择"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT,no-resolve"
   - "RULE-SET,Lan,DIRECT,no-resolve"
-  - "GEOIP,CN,DIRECT,no-resolve"
   - "MATCH,🐟 漏网之鱼"
