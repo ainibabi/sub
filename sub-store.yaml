@@ -133,7 +133,7 @@ rule-providers:
     format: mrs
     type: http
   proxy_domain:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/proxy.mrs
+    url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/proxy.mrs
     path: ./ruleset/proxy_domain.mrs
     behavior: domain
     interval: 86400
