@@ -83,12 +83,19 @@ rule-providers:
     interval: 86400
     format: mrs
     type: http
-  GameDownload:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
-    path: ./ruleset/GameDownload.yaml
+  steam_xz1_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/steam%40cn.mrs
+    path: ./ruleset/steam_xz1_domain.mrs
     behavior: domain
     interval: 86400
-    format: yaml
+    format: mrs
+    type: http
+  steam_xz2_domain:
+    url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/Steam-domain.mrs
+    path: ./ruleset/steam_xz2_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
     type: http
   game_domain:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games.mrs
@@ -172,6 +179,13 @@ rule-providers:
   google_ip:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/google.mrs
     path: ./ruleset/google_ip.mrs
+    behavior: ipcidr
+    interval: 86400
+    format: mrs
+    type: http
+  steam_xz_ip:
+    url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/IP/steamCDN-ip.mrs
+    path: ./ruleset/steam_xz_ip.mrs
     behavior: ipcidr
     interval: 86400
     format: mrs
@@ -395,7 +409,7 @@ proxy-groups:
       - 🇩🇪 冷门节点
       - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png
-    name: GameDownload
+    name: steam下载
     type: select
     proxies:
       - ♻️ 自动选择
@@ -651,7 +665,9 @@ rules:
   - "RULE-SET,apple_domain,Apple"
   - "RULE-SET,google_domain,Google"
   - "RULE-SET,google_ip,Google,no-resolve"
-  - "RULE-SET,GameDownload,GameDownload"
+  - "RULE-SET,steam_xz1_domain,steam下载"
+  - "RULE-SET,steam_xz2_domain,steam下载"
+  - "RULE-SET,steam_xz_ip,steam下载,no-resolve"
   - "RULE-SET,game_domain,Game"
   - "RULE-SET,github_domain,GitHub"
   - "RULE-SET,bing_domain,Bing"
