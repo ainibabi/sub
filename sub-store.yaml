@@ -41,6 +41,13 @@ rule-providers:
     interval: 86400
     format: mrs
     type: http
+  ai_domain_add:
+    url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/ai.mrs
+    path: ./ruleset/ai_domain_add.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
   instagram_domain:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/instagram.mrs
     path: ./ruleset/instagram_domain.mrs
@@ -752,6 +759,7 @@ rules:
   - "RULE-SET,telegram_ip,Telegram,no-resolve"
   - "RULE-SET,openai_domain,OpenAI"
   - "RULE-SET,ai_domain,OpenAI"
+  - "RULE-SET,ai_domain_add,OpenAI"
   - "RULE-SET,ai_ip,OpenAI,no-resolve"
   - "RULE-SET,instagram_domain,Instagram"
   - "RULE-SET,spotify_domain,Spotify"
