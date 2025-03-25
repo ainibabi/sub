@@ -243,13 +243,13 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/fallback.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: ♻️ 自动选择
     type: url-test
     interval: 300
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TikTok.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/tiktok.png
     name: TikTok
     type: select
     proxies:
@@ -269,7 +269,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/telegram.png
     name: Telegram
     type: select
     proxies:
@@ -289,7 +289,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/ai.png
     name: OpenAI
     type: select
     proxies:
@@ -309,7 +309,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Instagram.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/instagram.png
     name: Instagram
     type: select
     proxies:
@@ -329,7 +329,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Spotify.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/spotify.png
     name: Spotify
     type: select
     proxies:
@@ -349,7 +349,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/YouTube.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/youtube.png
     name: YouTube
     type: select
     proxies:
@@ -369,7 +369,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/netfix.png
     name: Netflix
     type: select
     proxies:
@@ -449,7 +449,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/apple.png
     name: Apple
     type: select
     proxies:
@@ -469,7 +469,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/google.png
     name: Google
     type: select
     proxies:
@@ -489,7 +489,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/steam.png
     name: steam下载
     type: select
     proxies:
@@ -509,7 +509,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/game.png
     name: Game
     type: select
     proxies:
@@ -529,7 +529,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/github.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/github.png
     name: GitHub
     type: select
     proxies:
@@ -549,7 +549,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Bing.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/microsoft.png
     name: Bing
     type: select
     proxies:
@@ -589,7 +589,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Emby.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/emby.png
     name: Customize
     type: select
     proxies:
@@ -609,7 +609,7 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Final.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/final.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     proxies:
@@ -631,98 +631,98 @@ proxy-groups:
       - DIRECT
     name: 🐟 漏网之鱼
     type: select
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Flower.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/private_node.png
     name: ✈️ 自建节点
     include-all: true
     filter: (?i)BWG|垃圾
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Hongkong.png
     name: 🇭🇰 香港节点
     include-all: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Hongkong.png
     name: 🇭🇰 香港节点-自动
     include-all: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: url-test
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TW.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Taiwan_China.png
     name: 🇨🇳 台湾节点
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/TW.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Taiwan_China.png
     name: 🇨🇳 台湾节点-自动
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     type: url-test
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Singapore.png
     name: 🇸🇬 狮城节点
     include-all: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Singapore.png
     name: 🇸🇬 狮城节点-自动
     include-all: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: url-test
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Japan.png
     name: 🇯🇵 日本节点
     include-all: true
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Japan.png
     name: 🇯🇵 日本节点-自动
     include-all: true
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: url-test
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/US.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/America.png
     name: 🇺🇲 美国节点
     include-all: true
     filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/US.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/America.png
     name: 🇺🇲 美国节点-自动
     include-all: true
     filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     type: url-test
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Korea.png
     name: 🇰🇷 韩国节点
     include-all: true
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
     type: select
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Korea.png
     name: 🇰🇷 韩国节点-自动
     include-all: true
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
     type: url-test
     interval: 300
     tolerance: 50
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/airport.png
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/European.png
     name: 🇩🇪 冷门节点
     include-all: true
     exclude-filter: (?i)KR|Korea|KOR|首尔|韩|韓|武汉|济南|徐州|镇江|以下为|去除|禁止|香港|HK|Hong\s?Kong|Hongkong|新加坡|坡|狮城|SG|Singapore|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|Tokyo|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United\s?States|America|California|台|新北|彰化|TW|Taiwan|重置
