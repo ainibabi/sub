@@ -6,9 +6,9 @@ rule-providers:
     interval: 86400
     format: mrs
     type: http
-  cn_domain:
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
-    path: ./ruleset/cn_domain.mrs
+  direct_domain:
+    url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/direct.mrs
+    path: ./ruleset/direct_domain.mrs
     behavior: domain
     interval: 86400
     format: mrs
@@ -163,6 +163,20 @@ rule-providers:
   proxy_domain:
     url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/proxy.mrs
     path: ./ruleset/proxy_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  gfw_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs
+    path: ./ruleset/gfw_domain.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
+  cn_domain:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn_domain.mrs
     behavior: domain
     interval: 86400
     format: mrs
@@ -732,6 +746,7 @@ proxy-groups:
 
 rules:
   - "RULE-SET,private_domain,DIRECT"
+  - "RULE-SET,direct_domain,DIRECT"
   - "RULE-SET,tiktok_domain,TikTok"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram,no-resolve"
@@ -757,8 +772,9 @@ rules:
   - "RULE-SET,bing_domain,Bing"
   - "RULE-SET,media_domain,GlobalMedia"
   - "RULE-SET,Customize,Customize" 
-  - "RULE-SET,geolocation-!cn,🚀 节点选择"
   - "RULE-SET,proxy_domain,🚀 节点选择"
+  - "RULE-SET,gfw_domain,🚀 节点选择"
+  - "RULE-SET,geolocation-!cn,🚀 节点选择"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT,no-resolve"
   - "RULE-SET,Lan,DIRECT,no-resolve"
