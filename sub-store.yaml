@@ -160,6 +160,13 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  forme_domain:
+    url: https://raw.githubusercontent.com/ainibabi/sub/refs/heads/main/direct.yaml
+    path: ./ruleset/forme_domain.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
   geolocation-!cn:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/geolocation-!cn.mrs
     path: ./ruleset/geolocation-!cn.mrs
@@ -630,6 +637,26 @@ proxy-groups:
       - 🇰🇷 韩国节点-自动
       - 🇩🇪 冷门节点
       - DIRECT
+  - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/emby.png
+    name: Forme
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ✈️ 自建节点
+      - 🇭🇰 香港节点
+      - 🇭🇰 香港节点-自动
+      - 🇨🇳 台湾节点
+      - 🇨🇳 台湾节点-自动
+      - 🇸🇬 狮城节点
+      - 🇸🇬 狮城节点-自动
+      - 🇯🇵 日本节点
+      - 🇯🇵 日本节点-自动
+      - 🇺🇲 美国节点
+      - 🇺🇲 美国节点-自动
+      - 🇰🇷 韩国节点
+      - 🇰🇷 韩国节点-自动
+      - 🇩🇪 冷门节点
+      - DIRECT
   - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/final.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -780,6 +807,7 @@ rules:
   - "RULE-SET,bing_domain,Bing"
   - "RULE-SET,media_domain,GlobalMedia"
   - "RULE-SET,Customize,Customize" 
+  - "RULE-SET,forme_domain,Forme" 
   - "RULE-SET,proxy_domain,🚀 节点选择"
   - "RULE-SET,gfw_domain,🚀 节点选择"
   - "RULE-SET,geolocation-!cn,🚀 节点选择"
