@@ -716,7 +716,7 @@ proxy-groups:
   - icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/private_node.png
     name: ✈️ 自建节点
     include-all: true
-    filter: (?i)BWG|垃圾
+    filter: (?i)BWG|垃圾|自建
     type: select
     interval: 300
     tolerance: 50
